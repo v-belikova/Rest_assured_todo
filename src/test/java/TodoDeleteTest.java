@@ -80,20 +80,4 @@ public class TodoDeleteTest {
         softAssertions.assertAll();
     }
 
-    /*@Epic(value = "Работа с Todo")
-    @Feature(value = "Неправильное удаление всех выполненных задач")
-    @Description(value = "Указывю неправильный маршрут запроса и вылетает 404")
-    @Test
-    public void negativeDeleteTodoAllTest(){
-        request.header("Content-Type", "application/json");
-        request.body(requestBody.toString());
-
-        Response response = request.log().all().delete(routes.getPaginatedTodo+"_-_-_").then().log().all().contentType(ContentType.JSON).extract().response();
-
-        int statusCode = response.getStatusCode();
-        String error = response.jsonPath().getString("error");
-        softAssertions.assertThat(404).isEqualTo(statusCode);
-        softAssertions.assertThat("Not Found").isEqualTo(error);
-        softAssertions.assertAll();
-    }*/
 }

@@ -40,27 +40,4 @@ public class TodoCreateTest {
         softAssertions.assertAll();
     }
 
-    /*@Epic(value = "Работа с Todo")
-    @Feature(value = "Неправильное создание задачи")
-    @Description(value = "Передаю в тело запроса текст на 1000 символов и вылетает ошибка")
-    @Test
-    public void negativeTodoCreateTest(){
-        methods1.loginDefault();
-        requestBody.put("text", superLongText);
-        request.header("Content-Type", "application/json");
-        request.body(requestBody.toString());
-
-        Response response = request.log().all()
-                .post(routes.todoCreate).then().contentType(ContentType.JSON)
-                .log().all().extract().response();
-
-        int statusCode = response.getStatusCode();
-        String success = response.jsonPath().getString("success");
-        int customStatusCode = response.jsonPath().getInt("statusCode");
-
-        softAssertions.assertThat(400).isEqualTo(statusCode);
-        softAssertions.assertThat("true").isEqualTo(success);
-        softAssertions.assertThat(errorCode.TODO_TEXT_SIZE_NOT_VALID).isEqualTo(customStatusCode);
-        softAssertions.assertAll();
-    }*/
 }
