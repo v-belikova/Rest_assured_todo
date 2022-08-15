@@ -47,4 +47,5 @@ public class Methods {
         request.post(routes.postLogin).then().
                 contentType(ContentType.JSON).extract().response().prettyPrint();
     }
+
 }
